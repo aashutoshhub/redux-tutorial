@@ -1,8 +1,14 @@
 import React from "react";
+import './Home.css';
 
-const Home=()=>{
+const Home=(props)=>{
+    console.warn("props",props);
     return (
-        <>
+        <> 
+          <div className="addToCart">
+            <img  src='https://static.vecteezy.com/system/resources/thumbnails/007/227/569/small/add-to-cart-icon-design-illustration-vector.jpg' alt="add to cart image" />
+          </div>
+
             <h1>Home component</h1>
             <div >
                 <button>Add to cart</button>
@@ -16,7 +22,11 @@ const Home=()=>{
                   <span>price : rs.120000</span>
               </div>
               <div className="btn-wrapper item">
-                  <button>Add to cart</button>
+                  <button
+                  onClick={()=>{
+                    props.addToCartHandler({price:1000,name:'iphone'})
+                  }}
+                  >Add to cart</button>
               </div>
             </div>
         </>

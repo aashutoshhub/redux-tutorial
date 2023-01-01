@@ -1,7 +1,7 @@
-import {combineReducers} from 'redux';
-import cardItems from './reducers';
+//combineReducers is used to combine all the reducers in one reducer 
+import {combineReducers} from 'redux';  
+import cartItems from './reducers';
 
-//root reducers combine all the reducers in one file 
 export default combineReducers({
-    cardItems
+    cartItems, //all the reducers are included in it to combine
 });

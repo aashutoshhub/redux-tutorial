@@ -5,20 +5,20 @@ import App from './App';
 
 
 //
-import HomeContainer from "./containers/homeContainers";
-//
-import { createStore } from 'redux';
+import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import rootReducer from './services/Reducers/index';
-const store=createStore(rootReducer);
-console.warn(store);
-
+//
+const store=createStore(rootReducer);   //wrapping data from reducer into store store
 //
 
+//console.log("store data : ",store);
+
 ReactDOM.render(
-   <Provider store={store}>
-    <App/>
-   </Provider>
+   //this store will take  data from the root reducer and flow the data in application
+     <Provider store={store}>
+       <App/>
+     </Provider>
   ,document.getElementById("root")
 )
 

@@ -11,7 +11,11 @@ function App() {
     //   <h1>App component</h1>
     //   <User data={{name:"Aashu",age:22}} />
     // </div>
+
+
     <HomeContainers/>
+
+    
   );
 }
 

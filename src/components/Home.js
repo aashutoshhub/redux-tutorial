@@ -2,7 +2,7 @@ import React from "react";
 import './Home.css';
 
 const Home=(props)=>{
-    console.warn("props",props);
+    console.warn("Home props",props);
     return (
         <> 
           <div className="addToCart">
@@ -23,9 +23,10 @@ const Home=(props)=>{
               </div>
               <div className="btn-wrapper item">
                   <button
-                  onClick={()=>{
-                    props.addToCartHandler({price:1000,name:'iphone'})
-                  }}
+                  onClick={()=>props.addToCartHandler({
+                    price:'Rs.12000',
+                    name:'i phone 11',
+                    })}
                   >Add to cart</button>
               </div>
             </div>

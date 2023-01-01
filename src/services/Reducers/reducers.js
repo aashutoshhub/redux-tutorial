@@ -2,18 +2,22 @@
 import {ADD_TO_CART} from "../constants";
 
 const initialState={
-    cardDate:[]
+    cartData:[]
 }
 
-export default function cardItems(state=initialState,action){
+//action is pass internally without calling 
+export default function cartItems(state=initialState,action) { 
+    console.log("reducer data : ",action);
     switch(action.type){
         case ADD_TO_CART:
-            return{
+            return {
                 ...state,
-                cardData:action.data
+                cartData:action.data,
             }
             break;
         default:
-        return state
+            return {
+                ...state,
+            }
     }
-}
+ }

@@ -1,7 +1,7 @@
 
 
 //video_07  // action is used to collects data from react components
-import {ADD_TO_CART} from "../constants";
+import {ADD_TO_CART, REMOVE_TO_CART} from "../constants";
 
 const addToCart=(data)=>{
 
@@ -13,4 +13,13 @@ const addToCart=(data)=>{
     }
 }
 
-export {addToCart};
+const removeToCart=()=>{
+
+    console.warn("action");
+   
+    return{
+        type:REMOVE_TO_CART, 
+    }
+}
+
+export {addToCart,removeToCart};

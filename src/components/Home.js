@@ -2,12 +2,11 @@ import React from "react";
 import './Home.css';
 
 const Home=(props)=>{
-    console.warn("Home props",props);
+   console.log(props)
+    console.warn("Home props",props.Data);
+    // console.warn("Home props data ",props.Data[0]);
     return (
         <> 
-          <div className="addToCart">
-            <img  src='https://static.vecteezy.com/system/resources/thumbnails/007/227/569/small/add-to-cart-icon-design-illustration-vector.jpg' alt="add to cart image" />
-          </div>
 
             <h1>Home component</h1>
             <div >
@@ -28,6 +27,11 @@ const Home=(props)=>{
                     name:'i phone 11',
                     })}
                   >Add to cart</button>
+
+                  <button
+                    onClick={()=>props.removeToCartHandler()}
+                   >Remove to cart</button>
+                   
               </div>
             </div>
         </>
